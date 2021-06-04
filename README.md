@@ -94,6 +94,18 @@ Before start, we need to have installed the next.
    PREFIX = <Your desired Prefix>
    ```
 
+## Roadmap
+
+Features that will come in the next version:
+
+* Interact with the Riot API.
+* Free rotation.
+* Shop sales.
+* Graphics with your progress.
+* Leaderboard per server.
+* Config per server.
+* Languages: Spanish, French, German and Korean. 
+
 ## License
 
 Distributed under the CC-BY License. See [this link](https://creativecommons.org/licenses/by/3.0/) for more information.
