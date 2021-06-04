@@ -3,7 +3,6 @@ module.exports = {
     description: 'Tells your MMR',
     async execute(Discord, client, message, args){
         const { NodeHtmlMarkdown } = require('node-html-markdown');
-        translate = require("@k3rn31p4nic/google-translate-api");
         const superagent = require('superagent');
         const serverList = {
             servers: ['euw', 'eune', 'kr', 'na']
