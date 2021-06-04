@@ -1,9 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
-
 <br />
 <p align="center">
   <a href="https://github.com/albertoparras-dev/MMR_Bot">
@@ -107,13 +101,3 @@ Distributed under the CC-BY License. See [this link](https://creativecommons.org
 ## Contact
 
 Alberto Parras - [@albertoparrasc](https://twitter.com/albertoparrasc) - aparrasceballos@gmail.com - Friext#6935 - [Support Server](https://discord.com/api/oauth2/authorize?client_id=850218581501542400&permissions=2148006976&scope=bot)
-
-
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/albertoparras-dev/MMR_Bot/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/albertoparras-dev/MMR_Bot/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/albertoparras-dev/MMR_Bot/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/albertoparras-dev/MMR_Bot/issues
