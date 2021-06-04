@@ -109,8 +109,8 @@ Features that will come in the next version:
 
 ## License
 
-Distributed under the CC-BY License. See [this link](https://creativecommons.org/licenses/by/3.0/) for more information.
+Distributed under the [GNU General Public License v3.0](https://github.com/albertoparras-dev/MMR_Bot/blob/main/LICENSE).
 
 ## Contact
 
-Alberto Parras - [@albertoparrasc](https://twitter.com/albertoparrasc) - aparrasceballos@gmail.com - Friext#6935 - [Support Server](https://discord.com/api/oauth2/authorize?client_id=850218581501542400&permissions=2148006976&scope=bot)
+Alberto Parras - Twitter: [@albertoparrasc](https://twitter.com/albertoparrasc) - Gmail: aparrasceballos@gmail.com - Discord: Friext#6935 - [Support Server](https://discord.com/api/oauth2/authorize?client_id=850218581501542400&permissions=2148006976&scope=bot)
