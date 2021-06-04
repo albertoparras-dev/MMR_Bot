@@ -9,7 +9,6 @@
     "author": "albertoparras-dev AKA Friext#6935",
     "license": "CC-BY",
     "dependencies": {
-        "@k3rn31p4nic/google-translate-api": "^1.1.1",
         "discord.js": "^12.5.3",
         "dotenv": "^10.0.0",
         "node-html-markdown": "^0.1.6",
