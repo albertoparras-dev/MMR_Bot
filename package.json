@@ -7,11 +7,13 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "albertoparras-dev AKA Friext#6935",
-    "license": "CC-BY",
+    "license": "GPL-3.0",
     "dependencies": {
+        "chartjs-node-canvas": "^3.2.0",
         "discord.js": "^12.5.3",
         "dotenv": "^10.0.0",
         "node-html-markdown": "^0.1.6",
-        "superagent": "^6.1.0"
+        "superagent": "^6.1.0",
+        "superagent-throttle": "^1.0.1"
     }
 }
