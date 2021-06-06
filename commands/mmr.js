@@ -4,10 +4,16 @@ module.exports = {
     async execute(Discord, client, message, args){
         const { NodeHtmlMarkdown } = require('node-html-markdown');
         const superagent = require('superagent');
+        const Throttle = require('superagent-throttle');
+        let throttle = new Throttle({
+            active: true,
+            rate: 60,
+            ratePer: 60000
+        });
         const serverList = {
             servers: ['euw', 'eune', 'kr', 'na']
-        }
-        
+        };
+
         var split = message.content.split(' ');
         user = '';
         emblem = '';
@@ -33,6 +39,8 @@ module.exports = {
         // Connects to the whatismymmr API
         superagent
         .get(`https://${server}.whatismymmr.com/api/v1/summoner?name=${user}`)
+        .set('user-agent', 'discord:mmrbot:1.0.0')
+        .use(throttle.plugin())
         .end((err, res) => {
         let body = res.body;
 
