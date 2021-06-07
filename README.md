@@ -62,6 +62,7 @@ Here is the list of things that I used to do the bot:
 * [node-html-markdown](https://www.npmjs.com/package/node-html-markdown)
 * [superagent](https://www.npmjs.com/package/superagent)
 * [WhatIsMyMMR API](https://dev.whatismymmr.com/)
+* [Quick.db](https://www.npmjs.com/package/quick.db)
 
 ## Getting Started
 
@@ -92,7 +93,7 @@ Before start, we need to have installed the next.
 5. Fill the `.env` file following this template
    ```
    TOKEN = <Your Discord Bot Token Here>
-   PREFIX = <Your desired Prefix>
+   DEFAULTPREFIX = <Your desired Prefix>
    ```
 
 ## Roadmap
