@@ -1,9 +1,4 @@
 module.exports = (Discord, client, message) => {
-    if (!message.content.startsWith(process.env.PREFIX) || message.author.bot);
-    const args = message.content.slice(process.env.PREFIX.length).split(/ +/);
-    const cmd = args.shift().toLowerCase();
-    const command = client.commands.get(cmd);
-
     const help =  new Discord.MessageEmbed()
     .setColor('white')
     .setAuthor('MMR Bot - Help', client.user.displayAvatarURL())
@@ -16,11 +11,13 @@ module.exports = (Discord, client, message) => {
     )
     .setFooter('Thanks for using MMR Bot', 'https://raw.githubusercontent.com/albertoparras-dev/MMR_Bot/main/img/Hearth.png');
 
-    if (message.author.bot) return false;
+    if (message.mentions.has(client.user.id)) message.channel.send(help);
     if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
-    if (message.mentions.has(client.user.id)) {
-        message.channel.send(help);
-    }
+
+    if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
+    const args = message.content.slice(process.env.PREFIX.length).split(/ +/);
+    const cmd = args.shift().toLowerCase();
+    const command = client.commands.get(cmd);
 
     if(command) command.execute(Discord, client, message, args);
 }
