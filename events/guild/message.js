@@ -1,23 +1,28 @@
-module.exports = (Discord, client, message) => {
-    const help =  new Discord.MessageEmbed()
-    .setColor('white')
-    .setAuthor('MMR Bot - Help', client.user.displayAvatarURL())
-    .setThumbnail(client.user.displayAvatarURL())
-    .setDescription("Hey! Here you have my commands. I'll remind you that I'm in beta, tons of features are coming.")
-    .addFields(
-        { name: '-mmr region user', value: 'Gives the MMR of a user, example: -mmr euw pr1meé' },
-        { name: '-bot', value: 'Gives info of the bot (Links, author and repo)' },
-        { name: '-invite', value: 'Gives the invite link of the bot' }
-    )
-    .setFooter('Thanks for using MMR Bot', 'https://raw.githubusercontent.com/albertoparras-dev/MMR_Bot/main/img/Hearth.png');
+module.exports = {
+    name: 'prefix',
+    description: 'Changes the bot prefix',
+    async execute(Discord, client, message, args){
+        const db = require('quick.db');
+        var guildInfo = new db.table('guildInfo');
+        var split = message.content.split(' ');
+        customPrefix = split[1];
 
-    if (message.mentions.has(client.user.id)) message.channel.send(help);
-    if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
+        if (!message.member.hasPermission("ADMINISTRATOR")) {
+            message.channel.send("You don't have enough permissions to use this command.")
+            return;
+        }
+        
+        if (!args[0]) {
+            message.channel.send('This command needs args, mention me for help');
+            return;
+        }
 
-    if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
-    const args = message.content.slice(process.env.PREFIX.length).split(/ +/);
-    const cmd = args.shift().toLowerCase();
-    const command = client.commands.get(cmd);
+        if (args[1]) {
+            message.channel.send("The prefix can't have spaces.")
+            return;
+        }
 
-    if(command) command.execute(Discord, client, message, args);
+        guildInfo.set(`${message.guild.id}`, { prefix: `${customPrefix}` });
+        message.channel.send(`The prefix has been changed succesfully to: ${customPrefix}`);
+    }
 }
