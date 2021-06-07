@@ -15,6 +15,10 @@ module.exports = {
         };
 
         var split = message.content.split(' ');
+        if (!split[1]) {
+            message.channel.send('This command needs args, mention me for help.')
+            return;
+        }
         user = '';
         emblem = '';
         color = '';
